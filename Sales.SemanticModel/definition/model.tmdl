@@ -11,8 +11,6 @@ queryGroup 'Raw Data'
 
 	annotation PBI_QueryGroupOrder = 0
 
-annotation PBIDesktopVersion = 2.144.679.0 (25.06)+ef40146207b86a826d1c72a7727a743ee37450e9
-
 annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["RangeStart","RangeEnd","Environment","Randomizer","Calendar","Sales","Product","Customer","Store","RAW-Product","RAW-Store","RAW-Customer","RAW-Sales","RAW-SalesDateAdjustedAndSalesRandomized","RAW-CurrencyExchange","About","HttpSource"]
