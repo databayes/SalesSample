@@ -27,7 +27,7 @@ table Sales
 		formatString: $ #,##0
 		lineageTag: d2724187-f1de-4a90-84bc-fc96aab3194b
 
-	/// Sales Amount Last Year considering a full month
+	/// Sales Amount Last Year considering a full month test to see changes
 	/// 
 	measure 'Sales Amount (LY)' = CALCULATE([Sales Amount], SAMEPERIODLASTYEAR('Calendar'[Date]))
 		formatString: \$#,0;(\$#,0);\$#,0

@@ -1,0 +1,141 @@
+createOrReplace
+
+	table 'Model Documentation'
+		isHidden
+		lineageTag: 41a3cc11-597e-41b8-9a86-ba01bb81651e
+
+		/// CALCULATE(
+		///     COUNTROWS( 'Model Documentation' ),
+		///     'Model Documentation'[Type] = "Measure"
+		/// )
+		measure '# of Measures' =
+				
+				CALCULATE(
+				    COUNTROWS( 'Model Documentation' ),
+				    'Model Documentation'[Type] = "Measure"
+				)
+			formatString: #,0
+			isHidden
+			displayFolder: Measures
+			lineageTag: 3467eb69-0953-451c-adfb-33ea9bb832b1
+
+		/// CALCULATE(
+		///     COUNTROWS( 'Model Documentation' ),
+		///     'Model Documentation'[Type] = "Column"
+		/// )
+		measure '# of Columns' =
+				
+				CALCULATE(
+				    COUNTROWS( 'Model Documentation' ),
+				    'Model Documentation'[Type] = "Column"
+				)
+			isHidden
+			displayFolder: Measures
+			lineageTag: 6b8fd05f-e238-4ef6-afb3-db8f461d989e
+
+		/// CALCULATE(
+		///     COUNTROWS( 'Model Documentation' ),
+		///     'Model Documentation'[Type] = "Table"
+		/// )
+		measure '# of Tables' =
+				
+				CALCULATE(
+				    COUNTROWS( 'Model Documentation' ),
+				    'Model Documentation'[Type] = "Table"
+				)
+			isHidden
+			displayFolder: Measures
+			lineageTag: 20397615-70a3-4d58-b767-19d611283e0a
+
+		/// CALCULATE(
+		///     COUNTROWS( 'Model Documentation' ),
+		///     'Model Documentation'[Type] = "Relationship"
+		/// )
+		measure '# of Relationship' =
+				
+				CALCULATE(
+				    COUNTROWS( 'Model Documentation' ),
+				    'Model Documentation'[Type] = "Relationship"
+				)
+			isHidden
+			displayFolder: Measures
+			lineageTag: 289672cf-8e71-4ada-ab5b-307e1b83293b
+
+		column Type
+			lineageTag: a1b0b575-1d4d-4915-9b75-13ecf3d45442
+			isNameInferred
+			sourceColumn: [Type]
+
+		column Name
+			lineageTag: 3cce843c-9799-46e3-9463-4db14ea1dec3
+			isNameInferred
+			sourceColumn: [Name]
+
+		column Description
+			lineageTag: 9a98d89d-6c20-4a33-94b1-8a7ba6c553cc
+			isNameInferred
+			sourceColumn: [Description]
+
+		column Location
+			lineageTag: 2c036e29-4008-4822-a68c-10a722aef33e
+			isNameInferred
+			sourceColumn: [Location]
+
+		column Expression
+			lineageTag: 4d9e426c-cbb7-4175-af4a-1aa82655a7d7
+			isNameInferred
+			sourceColumn: [Expression]
+
+		partition 'Model Documentation' = calculated
+			mode: import
+			source =
+					
+					VAR _columns =
+					    SELECTCOLUMNS(
+					        FILTER(
+					            INFO.VIEW.COLUMNS( ),
+					            [Table] <> "Model Documentation" && NOT ( [IsHidden] )
+					        ),
+					        "Type", "Column",
+					        "Name", [Name],
+					        "Description", [Description],
+					        "Location", [Table],
+					        "Expression", [Expression]
+					    )
+					VAR _measures =
+					    SELECTCOLUMNS(
+					        FILTER(
+					            INFO.VIEW.MEASURES( ),
+					            [Table] <> "Model Documentation" && NOT ( [IsHidden] )
+					        ),
+					        "Type", "Measure",
+					        "Name", [Name],
+					        "Description", [Description],
+					        "Location", [Table],
+					        "Expression", [Expression]
+					    )
+					VAR _tables =
+					    SELECTCOLUMNS(
+					        FILTER(
+					            INFO.VIEW.TABLES( ),
+					            [Name] <> "Model Documentation" && [Name] <> "Calculations"
+					                && NOT ( [IsHidden] )
+					        ),
+					        "Type", "Table",
+					        "Name", [Name],
+					        "Description", [Description],
+					        "Location", BLANK( ),
+					        "Expression", [Expression]
+					    )
+					VAR _relationships =
+					    SELECTCOLUMNS(
+					        INFO.VIEW.RELATIONSHIPS( ),
+					        "Type", "Relationship",
+					        "Name", [Relationship],
+					        "Description", BLANK( ),
+					        "Location", BLANK( ),
+					        "Expression", [Relationship]
+					    )
+					RETURN
+					    UNION( _columns, _measures, _tables, _relationships )
+
