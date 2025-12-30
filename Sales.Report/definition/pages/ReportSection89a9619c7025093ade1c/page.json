@@ -85,6 +85,22 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "b12b1aa360fbec499e42",
+        "ordinal": 4,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calendar"
+              }
+            },
+            "Property": "Year (Relative)"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
       }
     ],
     "filterSortOrder": "Custom"
