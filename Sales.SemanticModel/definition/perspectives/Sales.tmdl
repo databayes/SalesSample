@@ -34,6 +34,8 @@ perspective Sales
 
 		perspectiveMeasure 'Sales Amount (6M average)'
 
+		perspectiveMeasure 'Sales Amount-copy'
+
 		perspectiveColumn Quantity
 
 		perspectiveColumn 'Order Number'

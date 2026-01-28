@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "0d3e7e800d157447d967",
   "position": {
-    "x": 128.54935622317598,
-    "y": 8.0343347639484985,
+    "x": 98.369259606373,
+    "y": 8.397375820056233,
     "z": 10000,
-    "height": 62.4206008583691,
-    "width": 534.59227467811161,
+    "height": 62.3805060918463,
+    "width": 565.02343017806936,
     "tabOrder": 10000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "MyCompany - Dynamic Measure",
+                    "value": "Mathias and Sue - Dynamic Measure",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
                       "fontSize": "24pt",

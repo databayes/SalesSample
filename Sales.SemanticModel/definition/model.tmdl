@@ -32,6 +32,7 @@ ref table About
 ref table 'Parameter - Dimension'
 ref table 'Parameter - Measure'
 ref table 'Time Intelligence'
+ref table 'Model Documentation'
 
 ref role 'Stores Cluster 1'
 ref role 'Stores Cluster 2'
