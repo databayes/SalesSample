@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "b5f2ce8ee65990353917",
   "position": {
     "x": 702.88638689866934,
@@ -240,6 +240,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "2cae7a70fa2f62f12039",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sales"
+              }
+            },
+            "Property": "# Customers (with Sales)"
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"
