@@ -1,0 +1,196 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "c9c62a1355668f5554c4",
+  "position": {
+    "x": 9.8178331735378723,
+    "y": 17.181208053691275,
+    "z": 0,
+    "height": 656.56759348034518,
+    "width": 695.83892617449669,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Model Documentation"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "Model Documentation.Name",
+              "nativeQueryRef": "Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Model Documentation"
+                    }
+                  },
+                  "Property": "Type"
+                }
+              },
+              "queryRef": "Model Documentation.Type",
+              "nativeQueryRef": "Type"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Model Documentation"
+                    }
+                  },
+                  "Property": "# of Columns"
+                }
+              },
+              "queryRef": "Model Documentation.# of Columns",
+              "nativeQueryRef": "# of Columns"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Model Documentation"
+                    }
+                  },
+                  "Property": "# of Measures"
+                }
+              },
+              "queryRef": "Model Documentation.# of Measures",
+              "nativeQueryRef": "# of Measures"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Model Documentation"
+                    }
+                  },
+                  "Property": "# of Relationship"
+                }
+              },
+              "queryRef": "Model Documentation.# of Relationship",
+              "nativeQueryRef": "# of Relationship"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Model Documentation"
+                    }
+                  },
+                  "Property": "# of Tables"
+                }
+              },
+              "queryRef": "Model Documentation.# of Tables",
+              "nativeQueryRef": "# of Tables"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "091dda992a4082f19daa",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Model Documentation"
+              }
+            },
+            "Property": "# of Columns"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fdf8a614ec7bd35d5a0b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Model Documentation"
+              }
+            },
+            "Property": "# of Measures"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f51d6c00c5cc59150bff",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Model Documentation"
+              }
+            },
+            "Property": "# of Relationship"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d63b860f4da99097c192",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Model Documentation"
+              }
+            },
+            "Property": "# of Tables"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8091292908a33e085610",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Model Documentation"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c62586d3ccf3b5b12f28",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Model Documentation"
+              }
+            },
+            "Property": "Type"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
